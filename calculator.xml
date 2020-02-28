@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Hello World!"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editText"-->
+<!--        android:layout_width="129dp"-->
+<!--        android:layout_height="133dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:text="Name"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        tools:layout_editor_absoluteX="2dp" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Calculator"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="40dp"
+    android:textSize="30sp"
+    />
+<EditText
+    android:id="@+id/editText1"
+    android:layout_width="130dp"
+    android:layout_height="100dp"
+    android:inputType="number"
+    android:text="input1"
+    android:layout_alignParentLeft="true"
+    android:gravity="center"
+    android:layout_marginLeft="50dp"
+    android:layout_marginTop="100dp"
+     />
+
+<EditText
+    android:id="@+id/editText2"
+    android:layout_width="130dp"
+    android:layout_height="100dp"
+    android:inputType="number"
+    android:text="input2"
+    android:layout_toRightOf="@id/editText1"
+    android:layout_alignTop="@id/editText1"
+    android:layout_marginLeft="50dp"
+    android:gravity="center"
+    />
+
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/add"
+        android:layout_alignLeft="@id/editText1"
+        android:layout_alignBottom="@id/editText1"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="-128dp"
+        android:text="+"
+        android:textSize="20sp"
+        android:textFontWeight="700"/>
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/add"
+        android:layout_toRightOf="@id/add"
+        android:text="-"
+        android:textSize="20sp"
+        android:textFontWeight="700"
+        android:layout_marginLeft="36dp"
+        />
+    <Button
+        android:id="@+id/mul"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/add"
+        android:layout_toRightOf="@id/sub"
+        android:text="*"
+        android:textSize="20sp"
+        android:textFontWeight="700"
+        android:layout_marginLeft="36dp"
+        />
+    <Button
+        android:id="@+id/div"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/add"
+        android:layout_toRightOf="@id/mul"
+        android:text="/"
+        android:textSize="20sp"
+        android:textFontWeight="700"
+        android:layout_marginLeft="36dp"
+        />
+    <TextView
+        android:id="@+id/res"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:text="Result"
+        android:gravity="center"
+        android:textFontWeight="600"
+        android:textSize="30sp"
+        android:layout_below="@id/add"
+        android:layout_marginTop="200dp"
+        />
+</RelativeLayout>
